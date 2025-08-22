@@ -1,0 +1,29 @@
+<h1 class="center-header">Poetry Search</h1>
+
+<div class="form-row">
+  <label for="query1">Search by Title:</label>
+  <input [(ngModel)]="titleQuery" placeholder="Poem Title" />
+  <button (click)="searchTitle()">Search</button>
+</div>
+
+<div class="form-row">
+  <label for="query2">Search by Author:</label>
+  <input [(ngModel)]="authorQuery" placeholder="Poem Author" />
+  <button (click)="searchAuthor()">Search</button>
+</div>
+
+<br>
+<br>
+
+@if (result) {
+    <h3>First 1000 characters of response. If truncated, inspect Console or Network in Developer Tools for full response.</h3>
+    <p>{{ result }}</p>
+}
+
+@if (errorMessage) {
+    <div class="alert alert-danger">
+    {{ errorMessage }}
+    </div>
+}
+
+<link rel="stylesheet" href="../styles.scss">
