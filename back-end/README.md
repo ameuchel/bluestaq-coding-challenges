@@ -35,7 +35,7 @@ One iteration of the simulation is when the elevator has to decide which directi
 Before each iteration, a `STATUS` message is outputted. This message includes the following:
 - current floor of the elevator
 - which floor the elevator is moving toward for the first person currently in the queue
-- For each floor, how many people are waiting to go up, how many people are waiting to go down, and how many people are currently riding to
+- for each floor, how many people are waiting to go up, how many people are waiting to go down, and how many people are currently riding to
 
 This helps determine the state of the simulation and if things are operating as one would expect.
 
@@ -54,7 +54,7 @@ Once a person enters the elevator and selects their floor, they will not select 
 
 People waiting on the first floor can only press the `up` button, and people on the top floor can only press the `down` button.
 
-Elevator operates in a "queued" fashion. In other words, once the first presses the up/down button, the elevator's priority is to pick that person up; although, it may pick other people up and drop them off along the way. Once it picks that first person up, its next priority is to drop them off. Again, it may pick other people up or drop them off along the way. Once it drops the first person off, it then looks at who is next in the queue from the remaining people on the elevator or waiting to get picked up. It then repeats the process. This ensures that no one gets stuck waiting for extended periods of time (or never gets picked up at all).
+Elevator operates in a "queued" fashion. In other words, once the first person presses the up/down button, the elevator's priority is to pick that person up; although, it may pick other people up and drop them off along the way. Once it picks that first person up, its next priority is to drop them off. Again, it may pick other people up or drop them off along the way. Once it drops the first person off, it then looks at who is next in the queue from the remaining people on the elevator or waiting to get picked up. It then repeats the process. This ensures that no one gets stuck waiting for extended periods of time (or never gets picked up at all).
 
 Elevator will stop at floors where people are waiting to go in the direction the elevator is already travelling. It will not stop if it passes a floor where a person(s) is waiting to go the opposite direction.
 
